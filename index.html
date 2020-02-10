@@ -26,14 +26,14 @@
 <body>
 
     <!-- Title -->
-    <div class="container" style="max-width:1200px">
+    <div class="container" style="max-width:1200px;">
         <div class='row mt-5 mb-3'>
             <div class='col text-center'>
                 <p class="h2 font-weight-normal">WaveNODE: A Continuous Normalizing Flow for Speech Synthesis</p>
             </div>
         </div>
     </div>
-    <div class="container" style="max-width:1000px">
+    <div class="container" style="max-width:1100px;">
         <!-- authors -->
         <!-- <div class='row text-center h5 font-weight-normal pl-4 pr-4 mb-4' style="font-style:italic">
                 <a class="col-md-3 col-xs-6 text-dark" href="http://www.google.com"><span>Author 1*</span></a>
@@ -76,26 +76,17 @@
 
                 <div class="container" style="max-width:850px; margin-top: 20px; margin-bottom: 40px">
                     <p style='line-height:1.3; font-size:large; text-align: justify'>
-                        In recent years, various flow-based generative models have been proposed to generate
-                        high-fidelity
-                        waveforms in
-                        real-time. However, these models usually require either a well-trained teacher network or a
-                        number
-                        of flow steps making
-                        them memory-inefficient. In this paper, we propose a novel generative model called WaveNODE
-                        which
-                        leverages continuous
-                        normalizing flows for speech synthesis. Unlike the existing models, WaveNODE places no
-                        constraint on
-                        the type of the
-                        functions used in flow transformations. Moreover, WaveNODE can be optimized to maximize the
-                        likelihood without requiring
-                        any teacher network or auxiliary loss terms. We experimentally show that WaveNODE achieves
-                        comparable performance in
-                        terms of mean opinion score (MOS) and conditional log-likelihood (CLL) with much fewer
-                        parameters
-                        compared to the
-                        conventional models.
+                        In recent years, various flow-based generative models have been proposed to generate 
+                        high-fidelity waveforms in real-time. However, these models require either 
+                        a well-trained teacher network or a number of flow steps making them memory-inefficient. 
+                        In this paper, we propose a novel generative model called WaveNODE which exploits 
+                        a continuous normalizing flow for speech synthesis. Unlike the conventional models, 
+                        WaveNODE places no constraint on the function used for flow operation, 
+                        thus allowing the usage of more flexible and complex functions. 
+                        Moreover, WaveNODE can be optimized to maximize the likelihood without requiring 
+                        any teacher network or auxiliary loss terms. We experimentally show that WaveNODE achieves 
+                        comparable performance in terms of mean opinion score (MOS) and conditional log-likelihood (CLL) 
+                        with fewer parameters compared to the existing models.
                     </p>
                 </div>
             </div>
@@ -116,36 +107,45 @@
             </div>
 
 
-            <div style='display: flex'>
-
-                <div style='flex: 1; '>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <p style='width: 120px; padding: 15px 0; text-align: center;'>Ground Truth</p>
+            <div style='display: flex; align-content: center; '>
+                <div style='flex: 1;  '>
+                    <div class='row' style='width: 500px; height:50px; '>
+                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Ground Truth</p>
                         <div style='height: 60px; vertical-align: middle'>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px'>
                                 <source src="./assets/1/a.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
-
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/griffin/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/2/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNet</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenet/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/3/a.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/4/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
@@ -157,116 +157,44 @@
                 <div style='flex: 1;'>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow (17.1M)</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/waveglow/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/5/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/flowavenet/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/6/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNODE</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet (18.6M)</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenode/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class='row' style='margin-top: 40px; margin-bottom: 10px'>
-                <p class='h4'>Example 2</p><br>
-            </div>
-
-
-            <div style='display: flex'>
-
-                <div style='flex: 1'>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Ground Truth</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/gt/1.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/griffin/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/7/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNODE</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenet/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div style='flex: 1'>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveGlow</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/waveglow/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/flowavenet/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNODE</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenode/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/8/a.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
@@ -274,43 +202,50 @@
                 </div>
             </div>
 
-            <div class='row' style='margin-top: 40px; margin-bottom: 10px'>
-                <p class='h4'>Example 3</p><br>
+            <div class='row' style='margin-top: 40px; margin-bottom: 10px;'>
+                <p class='h4'>Example 2</p>
             </div>
 
 
-            <div style='display: flex'>
-
-                <div style='flex: 1'>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Ground Truth</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/gt/1.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+            <div style='display: flex; align-content: center; '>
+                <div style='flex: 1;  '>
+                    <div class='row' style='width: 500px; height:50px; '>
+                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Ground Truth</p>
+                        <div style='height: 60px; vertical-align: middle'>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px'>
+                                <source src="./assets/1/b.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
-
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/griffin/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/2/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNet</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenet/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/3/b.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/4/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
@@ -319,127 +254,251 @@
                 </div>
 
 
-                <div style='flex: 1'>
+                <div style='flex: 1;'>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow (17.1M)</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/waveglow/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/5/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/flowavenet/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/6/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNODE</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet (18.6M)</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenode/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class='row' style='margin-top: 40px; margin-bottom: 10px'>
-                <p class='h4'>Example 4</p><br>
-            </div>
-
-
-            <div style='display: flex'>
-
-                <div style='flex: 1'>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Ground Truth</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/gt/1.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/griffin/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/7/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNODE</p>
                         </div>
                         <div style='height: 60px; '>
                             <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenet/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div style='flex: 1'>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveGlow</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/waveglow/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/flowavenet/1.wav" class="img-fluid rounded mx-auto d-block"
-                                    alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class='row' style='width: 450px; height:50px; '>
-                        <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>WaveNODE</p>
-                        </div>
-                        <div style='height: 60px; '>
-                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
-                                <source src="./assets/wavenode/1.wav" class="img-fluid rounded mx-auto d-block"
+                                <source src="./assets/8/b.wav" class="img-fluid rounded mx-auto d-block"
                                     alt="temp">
                             </audio>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class='row' style='margin-top: 40px; margin-bottom: 10px;'>
+                <p class='h4'>Example 3</p>
+            </div>
 
-        </div>
 
+            <div style='display: flex; align-content: center; '>
+                <div style='flex: 1;  '>
+                    <div class='row' style='width: 500px; height:50px; '>
+                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Ground Truth</p>
+                        <div style='height: 60px; vertical-align: middle'>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px'>
+                                <source src="./assets/1/c.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/2/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/3/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/4/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div style='flex: 1;'>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow (17.1M)</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/5/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/6/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet (18.6M)</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/7/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNODE</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/8/c.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='row' style='margin-top: 40px; margin-bottom: 10px;'>
+                <p class='h4'>Example 4</p>
+            </div>
+
+
+            <div style='display: flex; align-content: center; '>
+                <div style='flex: 1;  '>
+                    <div class='row' style='width: 500px; height:50px; '>
+                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Ground Truth</p>
+                        <div style='height: 60px; vertical-align: middle'>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px'>
+                                <source src="./assets/1/d.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Griffin-Lim</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/2/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNet</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/3/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/4/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div style='flex: 1;'>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveGlow (17.1M)</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/5/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/6/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>FloWaveNet (18.6M)</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/7/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class='row' style='width: 450px; height:50px; '>
+                        <div style='height: 60px;'>
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>WaveNODE</p>
+                        </div>
+                        <div style='height: 60px; '>
+                            <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
+                                <source src="./assets/8/d.wav" class="img-fluid rounded mx-auto d-block"
+                                    alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -470,7 +529,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Actnorm
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Actnorm
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -483,7 +542,7 @@
 
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>MBN</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>MBN</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -494,7 +553,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>None</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>None</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -519,7 +578,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Actnorm
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Actnorm
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -532,7 +591,7 @@
 
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>MBN</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>MBN</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -543,7 +602,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>None</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>None</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -571,7 +630,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Actnorm
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Actnorm
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -584,7 +643,7 @@
 
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>MBN</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>MBN</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -595,7 +654,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>None</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>None</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -620,7 +679,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>Actnorm
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>Actnorm
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -633,7 +692,7 @@
 
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>MBN</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>MBN</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -644,7 +703,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>None</p>
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>None</p>
                                 </div>
                                 <div style='height: 60px; '>
                                     <audio controls controlsList="nodownload" style='display: inline-block; padding:8px '>
@@ -675,7 +734,7 @@
                 <div style='flex: 1'>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
                             </p>
                         </div>
                         <div style='height: 60px; '>
@@ -687,7 +746,7 @@
 
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
                             </p>
                         </div>
                         <div style='height: 60px; '>
@@ -699,7 +758,7 @@
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
                             </p>
                         </div>
                         <div style='height: 60px; '>
@@ -716,7 +775,7 @@
                 <div style='flex: 1'>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
                             </p>
                         </div>
                         <div style='height: 60px; '>
@@ -728,7 +787,7 @@
                     </div>
                     <div class='row' style='width: 450px; height:50px; '>
                         <div style='height: 60px;'>
-                            <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
+                            <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
                             </p>
                         </div>
                         <div style='height: 60px; '>
@@ -751,7 +810,7 @@
                     <div style='flex: 1'>
                         <div class='row' style='width: 450px; height:50px; '>
                             <div style='height: 60px;'>
-                                <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
+                                <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
                                 </p>
                             </div>
                             <div style='height: 60px; '>
@@ -763,7 +822,7 @@
     
                         <div class='row' style='width: 450px; height:50px; '>
                             <div style='height: 60px;'>
-                                <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
+                                <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
                                 </p>
                             </div>
                             <div style='height: 60px; '>
@@ -775,7 +834,7 @@
                         </div>
                         <div class='row' style='width: 450px; height:50px; '>
                             <div style='height: 60px;'>
-                                <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
+                                <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
                                 </p>
                             </div>
                             <div style='height: 60px; '>
@@ -792,7 +851,7 @@
                     <div style='flex: 1'>
                         <div class='row' style='width: 450px; height:50px; '>
                             <div style='height: 60px;'>
-                                <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
+                                <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
                                 </p>
                             </div>
                             <div style='height: 60px; '>
@@ -804,7 +863,7 @@
                         </div>
                         <div class='row' style='width: 450px; height:50px; '>
                             <div style='height: 60px;'>
-                                <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
+                                <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
                                 </p>
                             </div>
                             <div style='height: 60px; '>
@@ -827,7 +886,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -839,7 +898,7 @@
         
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -851,7 +910,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -868,7 +927,7 @@
                         <div style='flex: 1'>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -880,7 +939,7 @@
                             </div>
                             <div class='row' style='width: 450px; height:50px; '>
                                 <div style='height: 60px;'>
-                                    <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
+                                    <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
                                     </p>
                                 </div>
                                 <div style='height: 60px; '>
@@ -903,7 +962,7 @@
                             <div style='flex: 1'>
                                 <div class='row' style='width: 450px; height:50px; '>
                                     <div style='height: 60px;'>
-                                        <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
+                                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-5
                                         </p>
                                     </div>
                                     <div style='height: 60px; '>
@@ -915,7 +974,7 @@
             
                                 <div class='row' style='width: 450px; height:50px; '>
                                     <div style='height: 60px;'>
-                                        <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
+                                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-4
                                         </p>
                                     </div>
                                     <div style='height: 60px; '>
@@ -927,7 +986,7 @@
                                 </div>
                                 <div class='row' style='width: 450px; height:50px; '>
                                     <div style='height: 60px;'>
-                                        <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
+                                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-3
                                         </p>
                                     </div>
                                     <div style='height: 60px; '>
@@ -944,7 +1003,7 @@
                             <div style='flex: 1'>
                                 <div class='row' style='width: 450px; height:50px; '>
                                     <div style='height: 60px;'>
-                                        <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
+                                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 5e-3
                                         </p>
                                     </div>
                                     <div style='height: 60px; '>
@@ -956,7 +1015,7 @@
                                 </div>
                                 <div class='row' style='width: 450px; height:50px; '>
                                     <div style='height: 60px;'>
-                                        <p style='height: 60px; width: 120px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
+                                        <p style='height: 60px; width: 150px; padding: 15px 0; text-align: center;'>test_tol: 1e-2
                                         </p>
                                     </div>
                                     <div style='height: 60px; '>
